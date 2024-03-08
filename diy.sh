@@ -2,10 +2,6 @@
 
 SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 
-git_clone_path master https://github.com/coolsnowwolf/lede target/linux/x86/files
-
-git_clone_path master https://github.com/coolsnowwolf/lede target/linux/x86/patches-5.15
-
 curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/linux/modules/video.mk -o package/kernel/linux/modules/video.mk
 curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/x86/base-files/etc/board.d/02_network -o target/linux/x86/base-files/etc/board.d/02_network
 
